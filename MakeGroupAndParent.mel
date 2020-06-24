@@ -1,7 +1,0 @@
-global proc MakeGroupAndParent(){
-    string $selection[] = `ls -sl`;
-	for($node in $selection){//配列から変数にセットを配列があるだけ繰り返す
-    $group =`group -em -n ("Group_" + $node)`;//空のグループを作り$nodeの配列から名前を取り出してGroup_と連結した名前を設定;
-    parent $node $group;//グループを親にしたペアレント化
-}
-}
